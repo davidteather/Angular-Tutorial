@@ -1,0 +1,8 @@
+<h1>Todos</h1>
+
+<app-add-todo (addTodo)="addTodo($event)"></app-add-todo>
+
+<!--Loops over given data with custom attribute-->
+<!--Since we passed in [todo]="todo" as a variable we need to declare that in the todo-item.ts file-->
+<app-todo-item *ngFor="let todo of todos" [todo]="todo" (deleteTodo)="deleteTodo($event)">
+</app-todo-item>
